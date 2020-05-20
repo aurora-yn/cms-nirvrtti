@@ -1,0 +1,36 @@
+body {
+  background-image: url(../images/main-yoga.jpg);
+  /* background-color: whitesmoke; */
+}
+
+#admin-login.wrap {
+  width: 40%;
+  min-width: 400px;
+  padding: 2em;
+  margin: 30px auto;
+  background: #ffffff9c;
+}
+#login-logo {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-top: 1em;
+}
+#login-logo h1 {
+  font-weight: 100;
+  margin: 0;
+}
+#login-logo h3 {
+  font-size: 1em;
+  margin: 0;
+}
+#login-form {
+  padding: 2em 3em;
+  text-align: center;
+}
+#login-form  h3 {
+  font-size: 1.3em;
+}
+#login-form .go-login {
+  color: #343434;
+  font-size: 1.2em;
+}

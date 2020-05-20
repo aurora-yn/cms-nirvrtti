@@ -1,0 +1,27 @@
+<%- include('_layouts/header') -%>
+
+<section id="wrap-content">
+  <h3 class="content-title" id="nav-title">Manage Page</h3>
+  <div class="content-btnbox">
+    <a href="/admin/createPage"class="btn-create-newpage">Create new page</a>
+  </div>
+  <div class="content-section">
+    <div class="list">
+      <a href="/admin/editPageDefault"><h5 class="list-title">Main</h5></a>
+      <p class="list-desc">This is main page which cannot be deleted</p>
+    </div>
+  </div>
+  <% pages.forEach(function(page) {
+    %>
+    <div class="content-section">
+      <div class="list">
+        <a href="/admin/editPage/<%= page._id %>"><h5 class="list-title"><%= page.title %></h5></a>
+        <p class="list-desc">/<%= page.slug %> | <%= page.subtitle %></p>
+        <a href="/admin/deletePage/<%= page._id %>" class="btn-delete">Delete Page</a>
+      </div>
+    </div>
+    <%
+  }); %>
+</section>
+
+<%- include('_layouts/footer') -%>

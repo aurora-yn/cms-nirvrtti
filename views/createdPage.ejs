@@ -1,0 +1,22 @@
+<%- include('_layouts/header') -%>
+
+<section id="wrap-content">
+  <h3 class="content-title">New page is created successfully!</h3>
+  <div class="content-section">
+    <div class="list">
+      <h5>Title</h5>
+      <p class="list-desc"><%= title %></p>
+      <h5>Subtitle</h5>
+      <p class="list-desc"><%= subtitle %></p>
+      <h5>Slug</h5>
+      <p class="list-desc">/<%= slug %></p>
+      <h5>Summary</h5>
+      <p class="list-desc"><%- summary %></p>
+      <h5>Image File Name</h5>
+      <p class="list-desc"><%= pageimage %></p>
+    </div>
+    <a href="/admin">Go to Manage Page</a>
+  </div>
+</section>
+
+<%- include('_layouts/footer') -%>

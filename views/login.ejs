@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>nirvrtti - CMS Login</title>
+  <link rel="stylesheet" href="/css/adminComponent.css">
+  <link rel="stylesheet" href="/css/adminLogin.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <form method="POST" action="/admin/login"  enctype="multipart/form-data">
+    <div class="wrap" id="admin-login">
+
+      <div id="login-logo">
+        <h1>nirvrtti</h1>
+        <h3>contents management system</h3>
+      </div>
+
+      <div id="login-form">
+        <div class="form-ele">
+          <label for="username">ID</label>
+          <input id="username" placeholder="" type="text" name="username">
+        </div>
+        <div class="form-ele">
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password">
+        </div>
+        <div class="btn-box">
+          <button type="submit" class="btn-signIn">Sign In</button>
+        </div>
+        <div class="more">
+          <a href="#" class="btn">Create new account</a>
+          <a href="#" class="btn">Forgotten password</a>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</body>
+</html>

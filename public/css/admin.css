@@ -1,0 +1,141 @@
+/* 
+ * ---------------------------------------------
+ * Navigation styling
+ * ---------------------------------------------
+ */
+nav#nav {
+  min-height: 100vh;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 48px;
+  background: #e6d3d3;
+}
+nav#nav ul,
+nav#subnav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav#nav ul li {
+  padding: 1em 1.2em;
+  width: 60px;
+  text-align: center;
+}
+nav#nav ul li a {
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #2f282e;
+}
+nav#nav ul li a i {
+  font-size: 1.3em;
+}
+nav#nav ul li.selected {
+  background: #d6a4a4;
+}
+nav#nav ul li.selected a {
+  font-weight: 900;
+}
+nav#nav ul li:hover,
+nav#nav ul li:focus {
+  background: #cc7b7b;
+}
+nav#nav ul li:hover a,
+nav#nav ul li:focus a {
+  color: #fff;
+}
+/* --------------------------------------------- */
+nav#subnav {
+  width: 100%;
+  position: relative;
+  top: 0;
+  background: #5d4157;
+}
+nav#subnav ul {
+  overflow: auto;
+}
+nav#subnav ul li {
+  float: right;
+  margin: 0 20px;
+  padding: 0.8em 0;
+}
+nav#subnav ul li a {
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #f3f3f3;
+}
+nav#subnav ul li a i {
+  margin-right: 3px;
+}
+
+
+
+/* 
+ * ---------------------------------------------
+ * Content section styling
+ * ---------------------------------------------
+ */
+section#wrap-content {
+  clear: both;
+  position: relative;
+  margin-left: 92px;
+  padding: 2em;
+  
+}
+h3.content-title {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 1.6em;
+}
+.content-btnbox {
+  padding-bottom: 1em;
+  text-align: right;
+}
+.content-section {
+ background: #f3f3f3;
+}
+.content-section:first-child {
+  position: relative;
+  top: 1px;
+}
+.content-section .list {
+  border: 1px solid #cfcfcf;
+  padding: 1em;
+}
+.content-section .list a {
+  color: #2f282e;
+}
+.content-section .list h5,
+.content-section .list p {
+  margin: 0;
+}
+.content-section .list h5 {
+  font-size: 1.3em;
+  font-weight: 900;
+  padding-bottom: 5px;
+}
+.content-section .list p {
+  font-size: 0.9em;
+  font-weight: 100;
+}
+.content-section.notice {
+  text-align: center;
+  padding: 2em;
+}
+.content-section h3.notice {
+  padding: 1em;
+  margin: 0;
+}
+h3.error-msg-title {
+  font-weight: 900;
+  color: #d80d0d;
+  margin: 0;
+  margin-top: 15px;
+}
+h3.error-msg {
+  margin: 0;
+  margin-left: 20px;
+  padding-top: 5px;
+  font-size: 1em;
+  color: #d80d0d;
+}

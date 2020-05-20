@@ -1,0 +1,18 @@
+<%- include('_layouts/headerFront') -%>
+
+<section id="subpage" class="bg">
+    <div class="bg-wrap">
+      <figure>
+        <img src="/images_saved/<%= page.pageimage %>" alt="<%= page.pageimage %>">
+      </figure>
+      <article>
+        <h2><%= page.title %></h2>
+        <p><%= page.subtitle %></p>
+        <p class="main-para"><%- page.summary %></p>
+        <!-- <a href="#" class="btn-pages">More information</a> -->
+      </article>
+      <a href="#" class="btn-top">top</a>
+    </div>
+  </section>
+
+<%- include('_layouts/footerFront') -%>

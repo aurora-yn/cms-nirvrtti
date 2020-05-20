@@ -1,0 +1,23 @@
+{
+  "name": "cms-nirvrtti",
+  "version": "1.0.0",
+  "description": "Contents Management System for nirvrtti yoga studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Youngyun Namkung",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "*",
+    "ejs": "*",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-messages": "*",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "firebase-tools": "^7.14.0",
+    "fs-extra": "*",
+    "mongoose": "^5.9.3"
+  }
+}

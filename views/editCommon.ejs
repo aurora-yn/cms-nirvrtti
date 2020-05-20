@@ -1,0 +1,52 @@
+<%- include('_layouts/header') -%>
+
+<section id="wrap-content">
+  <h3>Edit Common area</h3>
+
+  <form method="POST" action="/admin/editCommon" enctype="multipart/form-data" class="form-wrap">
+    <div class="form-ele">
+      <label for="title">Title:</label>
+      <input type="text" class="form-input" name="title" value="<%= header.title %>">
+    </div>
+    <div class="form-ele">
+      <label for="subtitle">Subtitle:</label>
+      <input type="text" class="form-input" name="subtitle" value="<%= header.subtitle %>">
+    </div>
+    <div class="form-ele">
+      <label for="tagline">tagline:</label>
+      <textarea id="tagline" name="tagline"><%= header.tagline %></textarea>
+    </div>
+    <div class="form-ele">
+      <label for="logo">Image:</label>
+      <input type="file" class="form-input" name="logo">
+      <div>Current Image:</div>
+      <img src="/images_saved/<%= header.logo %>" alt="<%= header.logo %>" class="preview">
+    </div>
+    <div class="form-ele">
+        <label for="copyright">copyright:</label>
+        <input id="copyright" name="copyright" value="<%= header.copyright %>">
+      </div>
+    <div class="form-ele btn-box">
+      <input type="submit" class="btn-form-input" value="Save">
+    </div>
+  </form>
+  <% 
+    if(typeof errors !== 'undefined'){
+      for(var error of errors){
+        %>
+        <h3><%= error.msg %></h3>
+        <%
+      }
+    }
+  %>
+
+</section>
+
+<script>
+  ClassicEditor
+    .create( document.querySelector('#tagline') )
+    .catch( error => { console.error( error ); } )
+  ;
+</script>
+
+<%- include('_layouts/footer') -%>

@@ -1,0 +1,53 @@
+<%- include('_layouts/header') -%>
+
+<section id="wrap-content">
+  <h3>Edit Main Page</h3>
+
+  <form method="POST" action="/admin/editPageDefault" enctype="multipart/form-data" class="form-wrap">
+    <div class="form-ele">
+      <label for="title">Title:</label>
+      <input type="text" class="form-input" name="title" value="<%= main.title %>">
+    </div>
+    <div class="form-ele">
+      <label for="subtitle">Subtitle:</label>
+      <input type="text" class="form-input" name="subtitle" value="<%= main.subtitle %>">
+    </div>
+    <div class="form-ele">
+      <label for="slug">Slug:</label>
+      <input type="text" class="form-input" name="slug" value="/main" readonly id="admin-slug-main">
+    </div>
+    <div class="form-ele">
+      <label for="summary">Summary:</label>
+      <textarea id="summary" name="summary"><%= main.summary %></textarea>
+    </div>
+    <div class="form-ele">
+      <label for="pageimage">Image:</label>
+      <input type="file" class="form-input" name="pageimage">
+      <div>Current Image:</div>
+      <img src="/images_saved/<%= main.pageimage %>" alt="<%= main.pageimage %>" class="preview">
+    </div>
+    <% 
+      if(typeof errors !== 'undefined'){
+        %><h3 class="error-msg-title">Error Message</h3><%
+        for(var error of errors){
+          %>
+          <h3 class="error-msg"><%= error.msg %></h3>
+          <%
+        }
+      }
+    %>
+    <div class="form-ele btn-box">
+      <input type="submit" class="btn-form-input" value="Save">
+    </div>
+  </form>
+
+</section>
+
+<script>
+  ClassicEditor
+    .create( document.querySelector('#summary') )
+    .catch( error => { console.error( error ); } )
+  ;
+</script>
+
+<%- include('_layouts/footer') -%>
